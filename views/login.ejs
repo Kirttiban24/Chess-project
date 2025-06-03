@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 flex justify-center items-center h-screen">
+    <div class="bg-gray-800 p-8 rounded-xl shadow-lg w-96">
+        <h2 class="text-2xl font-bold text-white text-center mb-6">Login to Chess</h2>
+        <!-- <form id="loginForm"> -->
+            <form action="/login" method="post">
+            <div class="mb-4">
+                <label class="block text-gray-300 mb-1">Username</label>
+                <input type="text" name="username" id="username" required
+                    class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-300 mb-1">Password</label>
+                <input type="password" name="password" id="password" required
+                    class="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-500">
+            </div>
+            <button type="submit"
+                class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-2 rounded transition">Login</button>
+        </form>
+        <p class="text-gray-400 text-center mt-4">Don't have an account? <a href="/register"
+                class="text-green-400 hover:underline">Sign up</a></p>
+    </div>
+        
+</body>
+
+
+</html>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chess Game</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .chessboard {
-            display:grid;
+            display: grid;
             grid-template-columns: repeat(8, minmax(0, 1fr));
             grid-template-rows: repeat(8, minmax(0, 1fr));
             width: 400px;
@@ -41,7 +42,7 @@
         .square.dark {
             background-color: #b58863;
         }
-        
+
         .piece {
             font-size: 36px;
             cursor: grab;
@@ -58,19 +59,58 @@
         .flipped .piece {
             transform: rotate(180deg);
         }
+
+        .imgae-turn{
+            display: flex;
+            flex-direction: column;
+            gap: 230px;
+        }
+
+        .imgae-turn > div{
+            margin-right: 50px;
+        }
+
+        .imgae-turn img {
+            height: 100px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+        }
+
+        .imgae-turn p {
+            color: white;
+            text-align: center;
+        } 
+
     </style>
 </head>
+
 <body>
     <div class="w-full h-screen flex items-center justify-center bg-zinc-900 ">
+
+        <div class="imgae-turn">
+            <div>
+                <img src="https://cdn.britannica.com/71/223171-050-EB727CF2/Norwegian-chess-player-Magnus-Carlsen-2016.jpg"
+                    alt="p1-img">
+                <p>Player 2 </p>
+            </div>
+
+            <div>
+                <img src="https://pbs.twimg.com/profile_images/1536725744029663234/GS1jjuXF_400x400.jpg" alt="p2-img">
+                <p>Player 1 </p>
+            </div>
+
+        </div>
         <div class="chessboard w-96 h-96 bg-red-800"></div>
     </div>
 
-     <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
-     integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
-     crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js" 
-     integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA==" 
-     crossorigin="anonymous" referrerpolicy="no-referrer"></script> 
-    <script src="/javascript/chessgame.js"></script>  
+    <script src="https://cdn.socket.io/4.8.1/socket.io.min.js"
+        integrity="sha384-mkQ3/7FUtcGyoppY6bz/PORYoGqOl7/aSUMn2ymDOJcapfS6PHqxhRTMh1RR0Q6+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"
+        integrity="sha512-xRllwz2gdZciIB+AkEbeq+gVhX8VB8XsfqeFbUh+SzHlN96dEduwtTuVuc2u9EROlmW9+yhRlxjif66ORpsgVA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/javascript/chessgame.js"></script>
+    
 </body>
+
 </html>
